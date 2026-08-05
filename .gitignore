@@ -1,0 +1,20 @@
+# OS system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Code editor settings
+.vscode/
+.idea/
+
+# Environment variables & local secrets (never push to GitHub)
+.env
+.dev.vars
+
+# Cloudflare local CLI runtime state
+.wrangler/
+
+# Raw, uncompressed media source files (keeps repository size lightweight)
+raw-media/
+*.MOV
+*.original

@@ -1,0 +1,3 @@
+# Clean shortcuts and vanity redirects
+/resume        /files/resume.pdf        302
+/cv            /files/resume.pdf        302
