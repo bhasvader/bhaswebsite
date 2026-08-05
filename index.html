@@ -24,10 +24,10 @@
   <!-- Transparent Sticky Header (Slides down into view midway through intro) -->
   <header class="site-header">
     <div class="container header-inner">
-      <!-- Top-Left Name Logo (Syncopate Font) -->
+      <!-- Top-Left Name Logo (Syncopate Font & Dead-Center Alignment) -->
       <a href="/" class="logo">
         <span class="logo-badge">BHASKAR SINGH</span>
-        <span class="sys-tag">//</span>RKT
+        <span class="logo-rkt"><span class="sys-tag">//</span>RKT</span>
       </a>
 
       <!-- Column-Aligned Nav Wrapper -->
@@ -152,15 +152,16 @@
   <!-- Main Content Area -->
   <main id="main-content" class="container" style="padding-block: 4rem;">
     
-    <!-- ABOUT ME Section with Vertically Stacked Clickable Lightbox Photos -->
-    <section style="padding-block: 2rem 3rem;">
+    <!-- Section 2: ABOUT ME with Dual Tags & Vertically Stacked Photos -->
+    <section style="padding-block: 2rem 3.5rem;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
         
         <!-- Left Side: About Me Bio -->
         <div>
           <div class="section-header" style="margin-bottom: 1.5rem;">
             <h2 class="section-title" style="font-size: clamp(2.2rem, 4.5vw, 3.2rem); margin-bottom: 0.3rem;">ABOUT ME</h2>
-            <span class="section-tag" style="margin-bottom: 0;">AEROSPACE &amp; ROCKETRY</span>
+            <span class="section-tag" style="margin-bottom: 0.2rem;">AEROSPACE &amp; ROCKETRY</span>
+            <span class="section-tag" style="margin-bottom: 0;">STUDENT, DARTMOUTH COLLEGE</span>
           </div>
 
           <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2.25rem;">
@@ -177,7 +178,7 @@
           </div>
         </div>
 
-        <!-- Right Side: 2 Vertically Stacked Clickable Photos (Click to open full uncropped image modal) -->
+        <!-- Right Side: 2 Vertically Stacked Clickable Photos -->
         <div style="display: flex; flex-direction: column; gap: 1.25rem;">
           
           <!-- Photo 1: about1.webp -->
@@ -203,48 +204,102 @@
 
       </div>
     </section>
-
-    <!-- Raw Highlight Media Showcase Preview -->
-    <section style="padding-block: 3rem 2rem; border-top: 1px dashed var(--border-strong);">
-      <div class="section-header">
-        <span class="section-tag">High-Impact Flight & Hardware</span>
-        <h2 class="section-title">Raw Engineering Showcase</h2>
+    <!-- Section 3: CENTER-SPINE GRAPHICAL TIMELINE (Alternating Photo Cards) -->
+    <section style="padding-block: 4rem 3rem; border-top: 1px dashed var(--border-strong);">
+      <div class="section-header" style="text-align: center; border-left: none; padding-left: 0;">
+        <span class="section-tag" style="justify-content: center;">FLIGHT HISTORY &amp; MILESTONES</span>
+        <h2 class="section-title">LAUNCH TIMELINE</h2>
       </div>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem; margin-top: 2rem;">
+
+      <div class="timeline-center-wrapper">
         
-        <!-- Rocket Launch Showcase Card -->
-        <article class="tech-card">
-          <span class="telemetry-badge" style="margin-bottom: 1rem;">SYS.01 // ROCKETRY</span>
-          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase;">
-            1km High-Altitude Rocket Launch
-          </h3>
-          <p style="color: var(--text-dim); font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 1rem;">
-            FOUNDING TEAM LEAD &middot; 1000m APOGEE &middot; INDIA RECORD
-          </p>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-            Designed and launched the first high school team rocket to hit a verified 1 km apogee in India. Built recovery, airframe structure, and telemetry payload.
-          </p>
-          <a href="/projects.html" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); font-weight: 700;">
-            VIEW LAUNCH VIDEO &amp; SPECS &rarr;
-          </a>
+        <!-- Straight Narrowing Rocket Exhaust Plume Trail -->
+        <svg class="timeline-exhaust-plume" viewBox="0 0 80 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="plumeGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ff2a2a" stop-opacity="0.5" />
+              <stop offset="40%" stop-color="#ff2a2a" stop-opacity="0.3" />
+              <stop offset="75%" stop-color="#ff2a2a" stop-opacity="0.15" />
+              <stop offset="100%" stop-color="#ff2a2a" stop-opacity="0.04" />
+            </linearGradient>
+            <linearGradient id="plumeCoreGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ff4444" stop-opacity="0.85" />
+              <stop offset="50%" stop-color="#ff2a2a" stop-opacity="0.45" />
+              <stop offset="100%" stop-color="#ff2a2a" stop-opacity="0.08" />
+            </linearGradient>
+          </defs>
+          <!-- Outer Plume: Straight narrowing triangle -->
+          <polygon points="0,0 80,0 41,1000 39,1000" fill="url(#plumeGrad)" />
+          <!-- Hot Inner Core: Narrower straight center -->
+          <polygon points="25,0 55,0 41,1000 39,1000" fill="url(#plumeCoreGrad)" />
+        </svg>
+
+        <!-- Entry 1: EARLY 2024 (LEFT) -->
+        <article class="timeline-center-item left">
+          <div class="timeline-node"></div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-graphical-card" data-lightbox="/images/timeline1.webp" data-caption="[SYS.TEST // 01] EARLY 2024 — First Static Fire of Custom Motor">
+            <div class="timeline-photo-frame">
+              <img src="/images/timeline1.webp" alt="First Static Fire of Custom Built Motor">
+            </div>
+            <div class="timeline-date-badge">
+              <span class="telemetry-badge">SYS.TEST // 01</span>
+              <span>EARLY 2024</span>
+            </div>
+            <h3 class="timeline-title">First Static Fire of Custom Motor</h3>
+            <p class="timeline-meta">CUSTOM STEEL MOTOR &middot; CUSTOM KNO3 FUEL &middot; 650 N MAX THRUST</p>
+          </div>
         </article>
 
-        <!-- BeyondSight Startup Card -->
-        <article class="tech-card">
-          <span class="telemetry-badge" style="margin-bottom: 1rem;">SYS.02 // AWARD-WINNING HARDWARE</span>
-          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase;">
-            BeyondSight Currency Reader
-          </h3>
-          <p style="color: var(--text-dim); font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 1rem;">
-            STARTUP COMPETITION WINNER &middot; ACCESSIBILITY HARDWARE
-          </p>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-            Award-winning device built for visually impaired users to identify currency bills accurately in real-time. Won top honors across multiple startup competitions.
-          </p>
-          <a href="/projects.html" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); font-weight: 700;">
-            VIEW PROJECT DETAILS &rarr;
-          </a>
+        <!-- Entry 2: LATE 2024 (RIGHT) -->
+        <article class="timeline-center-item right">
+          <div class="timeline-node"></div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-graphical-card" data-lightbox="/images/timeline2.webp" data-caption="[SYS.FLIGHT // 02] LATE 2024 — Record-Breaking 1km Launch in India">
+            <div class="timeline-photo-frame">
+              <img src="/images/timeline2.webp" alt="Record Breaking 1km Launch in India">
+            </div>
+            <div class="timeline-date-badge">
+              <span class="telemetry-badge">SYS.FLIGHT // 02</span>
+              <span>LATE 2024</span>
+            </div>
+            <h3 class="timeline-title">Record-Breaking 1km Launch in India</h3>
+            <p class="timeline-meta">INDIA RECORD BROKEN &middot; 1KM APOGEE &middot; FULLY 3D PRINTED BODY (NYLON)</p>
+          </div>
+        </article>
+
+        <!-- Entry 3: NOVEMBER 2025 (LEFT) -->
+        <article class="timeline-center-item left">
+          <div class="timeline-node"></div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-graphical-card" data-lightbox="/images/timeline3.webp" data-caption="[SYS.FLIGHT // 03] NOVEMBER 2025 — First L1 Launch in US with Dartmouth Rocketry">
+            <div class="timeline-photo-frame">
+              <img src="/images/timeline3.webp" alt="First L1 Launch US and Dartmouth Rocketry" style="object-position: center 30%;">
+            </div>
+            <div class="timeline-date-badge">
+              <span class="telemetry-badge">SYS.FLIGHT // 03</span>
+              <span>NOVEMBER 2025</span>
+            </div>
+            <h3 class="timeline-title">First L1 Launch in US with Dartmouth Rocketry</h3>
+            <p class="timeline-meta">L1 CERTIFICATION &middot; SUCCESSFUL RECOVERY</p>
+          </div>
+        </article>
+
+        <!-- Entry 4: MAY 2026 (RIGHT) -->
+        <article class="timeline-center-item right">
+          <div class="timeline-node"></div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-graphical-card" data-lightbox="/images/timeline4.webp" data-caption="[SYS.FLIGHT // 04] MAY 2026 — Launch of DSTAR-1">
+            <div class="timeline-photo-frame">
+              <img src="/images/timeline4.webp" alt="Launch of DSTAR-1">
+            </div>
+            <div class="timeline-date-badge">
+              <span class="telemetry-badge">SYS.FLIGHT // 04</span>
+              <span>MAY 2026</span>
+            </div>
+            <h3 class="timeline-title">Launch of DSTAR-1</h3>
+            <p class="timeline-meta">CUSTOM CARBON FIBER FINS &middot; 5,881 FT APOGEE &middot; ONBOARD FOOTAGE &middot; DUAL DEPLOY</p>
+          </div>
         </article>
 
       </div>

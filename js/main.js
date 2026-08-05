@@ -5,14 +5,46 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Intro Animation Reveal Sequence (1000ms delay)
+  // 1. Header Intro Animation + Scroll-Hide + Mouse-Hover-Reveal
   const header = document.querySelector('.site-header');
   const heroOverlay = document.querySelector('.hero-overlay');
+  let headerRevealed = false; // tracks whether intro animation has played
+  let scrolledPastTop = false;
 
+  // Initial intro reveal after 1 second
   setTimeout(() => {
     if (header) header.classList.add('visible');
     if (heroOverlay) heroOverlay.classList.add('visible');
+    headerRevealed = true;
   }, 1000);
+
+  // Scroll listener: hide header once user scrolls past 80px
+  let lastScrollY = 0;
+  window.addEventListener('scroll', () => {
+    if (!headerRevealed || !header) return;
+    const currentY = window.scrollY;
+
+    if (currentY > 80) {
+      scrolledPastTop = true;
+      header.classList.add('header-hidden');
+    } else {
+      scrolledPastTop = false;
+      header.classList.remove('header-hidden');
+    }
+
+    lastScrollY = currentY;
+  }, { passive: true });
+
+  // Mouse listener: reveal header when mouse enters top 60px zone
+  document.addEventListener('mousemove', (e) => {
+    if (!headerRevealed || !header) return;
+
+    if (e.clientY <= 60) {
+      header.classList.remove('header-hidden');
+    } else if (scrolledPastTop) {
+      header.classList.add('header-hidden');
+    }
+  });
 
   // 2. SYS.NAV Dropdown Toggle Logic
   const menuToggle = document.getElementById('menu-toggle');
