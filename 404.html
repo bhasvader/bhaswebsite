@@ -3,43 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 Page Not Found | Portfolio</title>
-  <meta name="description" content="The requested page could not be found.">
+  <title>404 Page Not Found | Bhaskar Singh</title>
+  <meta name="description" content="Telemetry signal lost. Requested page not found.">
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to telemetry content</a>
 
-  <!-- Global Header -->
+  <!-- Compact Global Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">PORTFOLIO<span>.</span></a>
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/projects.html">Projects & Awards</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <a href="/" class="logo">
+        <span class="logo-badge">BHASKAR SINGH</span>
+        <span class="sys-tag">//</span>RKT
+      </a>
+
+      <!-- Column-Aligned Nav Wrapper -->
+      <div class="nav-wrapper">
+        <!-- Click Dropdown Menu Toggle Button -->
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu">
+          <span>SYS.NAV</span>
+          <span class="toggle-icon">[+]</span>
+        </button>
+
+        <!-- Dropdown Navigation Panel (Exact 140px Button Width Match) -->
+        <nav id="dropdown-menu" class="dropdown-menu hidden" aria-label="Main Navigation">
+          <a href="/">
+            <span>/00 HOME</span>
+          </a>
+          <a href="/projects.html">
+            <span>/01 PROJECTS</span>
+          </a>
+          <a href="/contact.html">
+            <span>/02 CONTACT</span>
+          </a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <!-- Main Content -->
   <main id="main-content" class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding-block: 6rem 4rem;">
-    <span class="section-tag" style="font-size: 1.25rem;">404 Error</span>
-    <h1 class="section-title" style="margin-block: 0.5rem 1rem;">Page Not Found</h1>
-    <p style="color: var(--text-muted); max-width: 50ch; margin-bottom: 2rem;">
-      The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+    <span class="telemetry-badge" style="margin-bottom: 1rem;">SIGNAL LOST // 404 ERROR</span>
+    <h1 class="section-title" style="margin-block: 0.5rem 1rem;">Trajectory Off Target</h1>
+    <p style="color: var(--text-muted); max-width: 50ch; margin-bottom: 2.5rem; font-family: var(--font-mono); font-size: 0.95rem;">
+      The coordinates you navigated to do not exist or have been moved.
     </p>
-    <a href="/" class="btn btn-primary">Return to Home</a>
+    <a href="/" class="btn btn-primary">
+      <span>RETURN TO TELEMETRY BASE (/00)</span> &#8594;
+    </a>
   </main>
 
   <!-- Global Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; 2026 Portfolio. Built & hosted on Cloudflare Pages.</p>
+      <p>[RKT-SYS] &copy; 2026 Bhaskar Singh (bhaskar-singh.com). Hosted on Cloudflare Pages.</p>
     </div>
   </footer>
 

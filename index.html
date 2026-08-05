@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Personal Engineering Portfolio</title>
-  <meta name="description" content="Personal portfolio showcasing engineering projects, skills, and background.">
+  <title>Bhaskar Singh — Aerospace & Rocketry Engineering</title>
+  <meta name="description" content="Bhaskar Singh: Aspiring aerospace engineer, founder of 1km altitude rocketry team in India, Dartmouth Student Rocketry member, and hardware innovator.">
   
   <!-- Open Graph / Social Media Preview -->
-  <meta property="og:title" content="Personal Engineering Portfolio">
-  <meta property="og:description" content="Personal portfolio showcasing engineering projects, skills, and background.">
-  <meta property="og:image" content="/images/og-preview.jpg">
+  <meta property="og:title" content="Bhaskar Singh — Aerospace Engineering & Rocketry">
+  <meta property="og:description" content="Rocketry launches, propulsion systems, hardware design, and engineering projects by Bhaskar Singh.">
+  <meta property="og:image" content="https://bhaskar-singh.com/images/og-preview.jpg">
+  <meta property="og:url" content="https://bhaskar-singh.com/">
   <meta property="og:type" content="website">
 
   <link rel="icon" href="/favicon.ico">
@@ -18,61 +19,257 @@
 <body>
 
   <!-- Accessible Skip to Content Link -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to telemetry content</a>
 
-  <!-- Global Header -->
+  <!-- Transparent Sticky Header (Slides down into view midway through intro) -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">PORTFOLIO<span>.</span></a>
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="/" class="active">Home</a></li>
-          <li><a href="/projects.html">Projects & Awards</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <!-- Top-Left Name Logo (Syncopate Font) -->
+      <a href="/" class="logo">
+        <span class="logo-badge">BHASKAR SINGH</span>
+        <span class="sys-tag">//</span>RKT
+      </a>
+
+      <!-- Column-Aligned Nav Wrapper -->
+      <div class="nav-wrapper">
+        <!-- Click Dropdown Menu Toggle Button -->
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu">
+          <span>SYS.NAV</span>
+          <span class="toggle-icon">[+]</span>
+        </button>
+
+        <!-- Dropdown Navigation Panel (Exact 140px Button Width Match) -->
+        <nav id="dropdown-menu" class="dropdown-menu hidden" aria-label="Main Navigation">
+          <a href="/" class="active">
+            <span>/00 HOME</span>
+          </a>
+          <a href="/projects.html">
+            <span>/01 PROJECTS</span>
+          </a>
+          <a href="/contact.html">
+            <span>/02 CONTACT</span>
+          </a>
+        </nav>
+      </div>
+
     </div>
   </header>
 
-  <!-- Main Content Area -->
-  <main id="main-content" class="container">
+  <!-- Fullscreen 100vh Hero Section: 3-Video Simultaneous Diagonal Showcase -->
+  <section class="hero-wrapper">
     
-    <!-- Hero & Short About Section -->
-    <section class="hero-section" style="padding-block: 4rem 2rem;">
-      <div class="section-header">
-        <span class="section-tag">Engineering Portfolio</span>
-        <h1 class="section-title" style="font-size: clamp(2.5rem, 5vw, 3.8rem);">Welcome to My Portfolio</h1>
+    <!-- 3 Diagonal Video Slashes Container (| / \ | Symmetrical Inverted V-Shape Geometry) -->
+    <div class="hero-collage">
+      
+      <!-- Panel 1: Left - homepage1.mp4 (Straight left, slash / on right) -->
+      <div class="hero-panel hero-panel-left">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="/video/homepage1.mp4" type="video/mp4">
+          <div class="video-placeholder">
+            <span>[HOMEPAGE 1 VIDEO]</span>
+            <span style="font-size: 0.65rem; color: var(--accent); margin-top: 0.5rem;">/video/homepage1.mp4</span>
+          </div>
+        </video>
       </div>
-      <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 65ch; margin-bottom: 2rem;">
-        [Placeholder for your short bio / intro statement. We will customize this with your discipline, background, and passions.]
-      </p>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-        <a href="/projects.html" class="btn btn-primary">View Featured Projects</a>
-        <a href="/contact.html" class="btn btn-secondary">Get in Touch</a>
+
+      <!-- Panel 2: Middle - homepage2.mp4 (Slash / on left, slash \ on right) -->
+      <div class="hero-panel hero-panel-middle">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="/video/homepage2.mp4" type="video/mp4">
+          <div class="video-placeholder">
+            <span>[HOMEPAGE 2 VIDEO]</span>
+            <span style="font-size: 0.65rem; color: var(--accent); margin-top: 0.5rem;">/video/homepage2.mp4</span>
+          </div>
+        </video>
+      </div>
+
+      <!-- Panel 3: Right - homepage3.mp4 (Slash \ on left, straight right) -->
+      <div class="hero-panel hero-panel-right">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="/video/homepage3.mp4" type="video/mp4">
+          <div class="video-placeholder">
+            <span>[HOMEPAGE 3 VIDEO]</span>
+            <span style="font-size: 0.65rem; color: var(--accent); margin-top: 0.5rem;">/video/homepage3.mp4</span>
+          </div>
+        </video>
+      </div>
+
+      <!-- Precise Vector SVG Separator Lines for | / \ | Geometry -->
+      <svg class="hero-slash-svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:5; pointer-events:none;">
+        <!-- Slash Line 1 (/ cut): (33.33, 0) to (25, 100) -->
+        <line x1="33.33" y1="0" x2="25" y2="100" stroke="#ff2a2a" stroke-width="2.5" vector-effect="non-scaling-stroke" style="filter: drop-shadow(0px 0px 8px rgba(255, 42, 42, 0.8));" />
+        
+        <!-- Slash Line 2 (\ cut): (66.67, 0) to (75, 100) -->
+        <line x1="66.67" y1="0" x2="75" y2="100" stroke="#ff2a2a" stroke-width="2.5" vector-effect="non-scaling-stroke" style="filter: drop-shadow(0px 0px 8px rgba(255, 42, 42, 0.8));" />
+      </svg>
+
+    </div>
+
+    <!-- Hero Bottom Text Overlay (Centered Orbitron Big Name & Bold < ENGINEER > Tag) -->
+    <div class="hero-overlay">
+      <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        
+        <!-- Centered Main Title (Orbitron Font) -->
+        <h1 class="section-title hero-main-title" style="font-size: clamp(2.3rem, 5.5vw, 4.2rem); line-height: 1.05; margin-bottom: 0.4rem;">
+          Bhaskar Singh
+        </h1>
+
+        <!-- Bold Crimson Red < ENGINEER > Tag Below Name -->
+        <div style="font-family: var(--font-tag); font-size: 0.82rem; color: var(--accent); letter-spacing: 0.22em; text-transform: uppercase; font-weight: 800; margin-top: 0.25rem;">
+          &lt; ENGINEER &gt;
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Discreet Video Context Bar Perfectly Aligned Under Video Geometry (28% | 44% | 28%) -->
+  <section style="background: var(--bg); border-bottom: 1px solid var(--border); padding-block: 0.85rem;">
+    <div style="width: 100%; padding-inline: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-tag); font-size: 0.75rem; color: var(--text-muted);">
+      
+      <!-- Left Video Context Label (Centered under Left Video Column) -->
+      <div style="width: 27%; text-align: center;">
+        <span style="color: var(--text-dim); margin-right: 0.35rem;">[01]</span>
+        <span>My first L1 launch in the US</span>
+      </div>
+
+      <!-- Center Video Context Label (Centered under Middle Video Column) -->
+      <div style="width: 46%; text-align: center;">
+        <span style="color: var(--text-dim); margin-right: 0.35rem;">[02]</span>
+        <span>DSTAR - 1, launched to 5,881 ft altitude</span>
+      </div>
+
+      <!-- Right Video Context Label (Centered under Right Video Column) -->
+      <div style="width: 27%; text-align: center;">
+        <span style="color: var(--text-dim); margin-right: 0.35rem;">[03]</span>
+        <span>Record-breaking 1km high school launch in India</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="container" style="padding-block: 4rem;">
+    
+    <!-- ABOUT ME Section with Vertically Stacked Clickable Lightbox Photos -->
+    <section style="padding-block: 2rem 3rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+        
+        <!-- Left Side: About Me Bio -->
+        <div>
+          <div class="section-header" style="margin-bottom: 1.5rem;">
+            <h2 class="section-title" style="font-size: clamp(2.2rem, 4.5vw, 3.2rem); margin-bottom: 0.3rem;">ABOUT ME</h2>
+            <span class="section-tag" style="margin-bottom: 0;">AEROSPACE &amp; ROCKETRY</span>
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2.25rem;">
+            Hello! I am an aspiring aerospace engineer with a deep passion for space exploration and high-powered rocketry. I founded India's first high school rocketry team to successfully achieve a 1-kilometer altitude launch, and I currently build with Dartmouth Student Rocketry in Hanover, NH. I specialize in hands-on engineering—designing and building systems that range from high-altitude rockets to AI-powered wildlife catalogers.
+          </p>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="/projects.html" class="btn btn-primary">
+              <span>/01 VIEW PROJECTS &amp; LAUNCHES</span> &#8594;
+            </a>
+            <a href="/contact.html" class="btn btn-secondary">
+              <span>/02 GET IN TOUCH</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: 2 Vertically Stacked Clickable Photos (Click to open full uncropped image modal) -->
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          
+          <!-- Photo 1: about1.webp -->
+          <div class="tech-card about-photo-card" style="padding: 0.35rem; border: 1px solid var(--border-strong);" data-lightbox="/images/about1.webp" data-caption="[IMG.01 // ME WITH DSTAR-1]">
+            <img src="/images/about1.webp" alt="Bhaskar Singh with DSTAR-1" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center bottom; display: block; background: var(--bg-subtle);">
+            <div style="font-family: var(--font-tag); font-size: 0.7rem; color: var(--text-muted); text-align: center; padding-top: 0.5rem; font-weight: 600;">
+              [IMG.01 // ME WITH DSTAR-1]
+            </div>
+          </div>
+
+          <!-- Horizontal Red Telemetry Line Divider between stacked photos -->
+          <div style="height: 2px; width: 100%; background: var(--accent); box-shadow: 0 0 10px var(--accent-glow);"></div>
+
+          <!-- Photo 2: about2.webp -->
+          <div class="tech-card about-photo-card" style="padding: 0.35rem; border: 1px solid var(--border-strong);" data-lightbox="/images/about2.webp" data-caption="[IMG.02 // ME WITH DR. SOMANATH, THEN CHAIRMAN OF ISRO]">
+            <img src="/images/about2.webp" alt="Bhaskar Singh with Dr. Somanath, Chairman of ISRO" style="width: 100%; height: auto; display: block; background: var(--bg-subtle);">
+            <div style="font-family: var(--font-tag); font-size: 0.7rem; color: var(--text-muted); text-align: center; padding-top: 0.5rem; font-weight: 600;">
+              [IMG.02 // ME WITH DR. SOMANATH, THEN CHAIRMAN OF ISRO]
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <!-- Highlight Projects Preview Section -->
-    <section style="padding-block: 3rem;">
+    <!-- Raw Highlight Media Showcase Preview -->
+    <section style="padding-block: 3rem 2rem; border-top: 1px dashed var(--border-strong);">
       <div class="section-header">
-        <span class="section-tag">Selected Highlights</span>
-        <h2 class="section-title">Featured Work</h2>
+        <span class="section-tag">High-Impact Flight & Hardware</span>
+        <h2 class="section-title">Raw Engineering Showcase</h2>
       </div>
-      <p style="color: var(--text-muted);">
-        [Highlights of top project visuals will go here.]
-      </p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem; margin-top: 2rem;">
+        
+        <!-- Rocket Launch Showcase Card -->
+        <article class="tech-card">
+          <span class="telemetry-badge" style="margin-bottom: 1rem;">SYS.01 // ROCKETRY</span>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase;">
+            1km High-Altitude Rocket Launch
+          </h3>
+          <p style="color: var(--text-dim); font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 1rem;">
+            FOUNDING TEAM LEAD &middot; 1000m APOGEE &middot; INDIA RECORD
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Designed and launched the first high school team rocket to hit a verified 1 km apogee in India. Built recovery, airframe structure, and telemetry payload.
+          </p>
+          <a href="/projects.html" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); font-weight: 700;">
+            VIEW LAUNCH VIDEO &amp; SPECS &rarr;
+          </a>
+        </article>
+
+        <!-- BeyondSight Startup Card -->
+        <article class="tech-card">
+          <span class="telemetry-badge" style="margin-bottom: 1rem;">SYS.02 // AWARD-WINNING HARDWARE</span>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase;">
+            BeyondSight Currency Reader
+          </h3>
+          <p style="color: var(--text-dim); font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 1rem;">
+            STARTUP COMPETITION WINNER &middot; ACCESSIBILITY HARDWARE
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Award-winning device built for visually impaired users to identify currency bills accurately in real-time. Won top honors across multiple startup competitions.
+          </p>
+          <a href="/projects.html" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); font-weight: 700;">
+            VIEW PROJECT DETAILS &rarr;
+          </a>
+        </article>
+
+      </div>
     </section>
 
   </main>
 
+  <!-- Full-Image Lightbox Telemetry Modal -->
+  <div id="image-lightbox" class="lightbox-modal hidden" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-close-btn" aria-label="Close modal">[X] CLOSE</button>
+      <img id="lightbox-img" src="" alt="Full size photo preview">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
   <!-- Global Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; 2026 Portfolio. Built & hosted on Cloudflare Pages.</p>
+      <p>[RKT-SYS] &copy; 2026 Bhaskar Singh (bhaskar-singh.com). Hosted on Cloudflare Pages.</p>
       <nav aria-label="Footer Navigation">
-        <ul style="display: flex; gap: 1.5rem;">
-          <li><a href="/projects.html">Projects & Awards</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+        <ul style="display: flex; gap: 1.75rem;">
+          <li><a href="/projects.html">/01 PROJECTS</a></li>
+          <li><a href="/contact.html">/02 CONTACT</a></li>
         </ul>
       </nav>
     </div>
