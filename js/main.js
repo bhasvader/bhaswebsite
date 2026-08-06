@@ -127,6 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       description: 'Engineering team member at Dartmouth Student Rocketry in Hanover, NH — contributing to high-powered rocketry systems, composite manufacturing, and flight operations. Highlights include DSTAR-1 (launched to a 5,881 ft apogee with custom carbon fiber fins) and Level 1 (L1) High-Power certification launch "Bee Positive".',
       media: [
+        { type: 'video', src: '/video/homepage1.mp4', caption: 'Bee Positive Flight Video' },
+        { type: 'youtube', src: 'https://www.youtube.com/embed/ZKi81vTXqro', caption: 'DSTAR-1 Full Onboard Footage' },
         { type: 'image', src: '/images/projects/project1/merocket1.webp', caption: 'Me with DSTAR-1' },
         { type: 'image', src: '/images/projects/project1/launch.webp', caption: 'DSTAR-1 Launch' },
         { type: 'image', src: '/images/projects/project1/rocketcarry1.webp', caption: 'Carrying DSTAR-1 to Launch Pad' },
@@ -153,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       description: 'Served as the President and Founder of RSYA (Rocket Science Youth Association), India\'s first high school rocketry team to achieve a verified 1-kilometer altitude launch. Engineered the vehicle\'s airframe using SLS 3D printed nylon components, resulting in a fully 3D printed structural body. Designed and manufactured two custom rocket motors—one from steel and one from aluminum—alongside a titanium nozzle used for high-performance testing. Formulated custom KNO3-based solid propellant, and collaborated with Paras Space Defense to iterate on the original design for a stronger propulsion system. Additionally, developed a custom single-deploy flight computer specifically for the 1km launch.',
       media: [
+        { type: 'video', src: '/video/homepage3.mp4', caption: 'RSYA 1KM Flight Video' },
         { type: 'image', src: '/images/projects/project2/1kmrocket.webp', caption: 'RSYA 1km Rocket on Pad' },
         { type: 'image', src: '/images/projects/project2/1kmlaunch.webp', caption: '1km Launch' },
         { type: 'image', src: '/images/projects/project2/3dprintedairframe.webp', caption: '3D Printed Nylon Airframe, Compared to an older test vehicle' },
@@ -160,7 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', src: '/images/projects/project2/fuelgrain.webp', caption: 'Solid Propellant Fuel Grains' },
         { type: 'image', src: '/images/projects/project2/motorbare.webp', caption: 'Machined Steel Motor' },
         { type: 'image', src: '/images/projects/project2/motorreadu.webp', caption: 'Motor Ready for Installation' },
-        { type: 'image', src: '/images/projects/project2/2ndmotorfailed.webp', caption: 'Static Test Failure of Aluminium Motor' }
+        { type: 'image', src: '/images/projects/project2/2ndmotorfailed.webp', caption: 'Static Test Failure of Aluminium Motor' },
+        { type: 'video', src: '/video/motortest.mp4', caption: 'Static Fire of Custom Motor' }
       ]
     },
     'project-3': {
@@ -259,6 +263,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (item.type === 'youtube') {
       mediaContainer.innerHTML = `<iframe src="${item.src}" title="${item.caption}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; aspect-ratio: 16/9; border: none; display: block; border: 1px solid var(--border-strong);"></iframe>`;
+    } else if (item.type === 'video') {
+      mediaContainer.innerHTML = `<video controls autoplay loop playsinline src="${item.src}" style="width: 100%; aspect-ratio: 16/9; object-fit: contain; background: var(--bg-subtle); border: 1px solid var(--border-strong);"></video>`;
     } else {
       mediaContainer.innerHTML = `<img src="${item.src}" alt="${item.caption}" style="width: 100%; aspect-ratio: 16/9; object-fit: contain; background: var(--bg-subtle); border: 1px solid var(--border-strong); cursor: pointer;" onclick="window.openModalImage && window.openModalImage('${item.src}', '${item.caption.replace(/'/g, "\\'")}')">`;
     }
