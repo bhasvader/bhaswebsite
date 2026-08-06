@@ -12,7 +12,6 @@
 
   <a href="#main-content" class="skip-link">Skip to telemetry content</a>
 
-  <!-- Compact Global Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo">
@@ -20,15 +19,13 @@
         <span class="sys-tag">//</span>RKT
       </a>
 
-      <!-- Column-Aligned Nav Wrapper -->
       <div class="nav-wrapper">
-        <!-- Click Dropdown Menu Toggle Button -->
+
         <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu">
           <span>SYS.NAV</span>
           <span class="toggle-icon">[+]</span>
         </button>
 
-        <!-- Dropdown Navigation Panel (Exact 140px Button Width Match) -->
         <nav id="dropdown-menu" class="dropdown-menu hidden" aria-label="Main Navigation">
           <a href="/">
             <span>/00 HOME</span>
@@ -44,59 +41,48 @@
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main id="main-content" class="container" style="padding-block: 4rem;">
-    
-    <section style="max-width: 750px;">
-      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-        <span class="telemetry-badge">SYS.COMM // DIRECT LINK</span>
-        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">[CH: ENCRYPTED]</span>
+  <main id="main-content" class="container" style="padding-block: 10rem 6rem; display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 65vh;">
+
+    <section style="max-width: 600px; width: 100%;">
+
+      <h1 style="font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; text-transform: uppercase; margin-bottom: 3.5rem; color: var(--text); letter-spacing: -0.02em; line-height: 1;">
+        Get In Touch
+      </h1>
+
+      <div style="display: flex; flex-direction: column; gap: 2.5rem; align-items: center;">
+
+        <div>
+          <h3 style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em;">// EMAIL TRANSMISSION</h3>
+          <a href="mailto:bhasvader77@gmail.com" style="color: var(--text); font-family: var(--font-body); font-size: 1.25rem; font-weight: 600; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
+            bhasvader77@gmail.com
+          </a>
+        </div>
+
+        <div>
+          <h3 style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em;">// LINKEDIN PROFILE</h3>
+          <a href="https://www.linkedin.com/in/bhaskar-singh-3b0b042b2/" target="_blank" rel="noopener noreferrer" style="color: var(--text); font-family: var(--font-body); font-size: 1.25rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
+            Bhaskar Singh <span style="color: var(--accent);">&#8599;</span>
+          </a>
+        </div>
+
       </div>
-
-      <div class="section-header">
-        <span class="section-tag">Direct Communication</span>
-        <h1 class="section-title">Get In Touch</h1>
-      </div>
-      
-      <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2.5rem; line-height: 1.7;">
-        Interested in aerospace engineering, rocketry systems, hardware collaboration, or research? Send a direct transmission below or reach out via email/LinkedIn.
-      </p>
-
-      <!-- Contact Form -->
-      <form id="contact-form" class="tech-card" style="border-top: 3px solid var(--accent);">
-        <div style="margin-bottom: 1.5rem;">
-          <label for="name" style="display: block; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--text);">
-            // FULL NAME
-          </label>
-          <input type="text" id="name" name="name" placeholder="Enter your name" required style="width: 100%; padding: 0.85rem 1rem; background: var(--bg); border: 1px solid var(--border-strong); color: var(--text); font-family: var(--font-body); font-size: 0.95rem;">
-        </div>
-
-        <div style="margin-bottom: 1.5rem;">
-          <label for="email" style="display: block; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--text);">
-            // EMAIL ADDRESS
-          </label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required style="width: 100%; padding: 0.85rem 1rem; background: var(--bg); border: 1px solid var(--border-strong); color: var(--text); font-family: var(--font-body); font-size: 0.95rem;">
-        </div>
-
-        <div style="margin-bottom: 2rem;">
-          <label for="message" style="display: block; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--text);">
-            // TRANSMISSION / MESSAGE
-          </label>
-          <textarea id="message" name="message" rows="5" placeholder="State your inquiry or project scope..." required style="width: 100%; padding: 0.85rem 1rem; background: var(--bg); border: 1px solid var(--border-strong); color: var(--text); font-family: var(--font-body); font-size: 0.95rem; resize: vertical;"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" style="width: 100%;">
-          <span>TRANSMIT MESSAGE</span> &#8594;
-        </button>
-      </form>
     </section>
 
   </main>
 
-  <!-- Global Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>[RKT-SYS] &copy; 2026 Bhaskar Singh (bhaskar-singh.com). Hosted on Cloudflare Pages.</p>
+      <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+        <p style="margin: 0;">&copy; 2026 Bhaskar Singh</p>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <a href="mailto:bhasvader77@gmail.com" aria-label="Email" style="color: var(--text-muted); display: inline-flex; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">
+            <svg xmlns="http://www.w3.org/2005/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.866l5.6-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/bhaskar-singh-3b0b042b2/" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); display: inline-flex; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2005/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
       <nav aria-label="Footer Navigation">
         <ul style="display: flex; gap: 1.75rem;">
           <li><a href="/">/00 HOME</a></li>
